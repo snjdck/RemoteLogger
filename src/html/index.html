@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="core.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body onload="onBodyInit()">
+		<table cellpadding="0" cellspacing="0">
+		<tr><td valign="top">
+			<fieldset style="width:240px;">
+				<legend>输出级别</legend>
+				<input type="checkbox" checked="checked" id="info" onchange="toggleOutputLevel(4)" />
+				<label for="info">信息</label>
+				<input type="checkbox" checked="checked" id="warning" onchange="toggleOutputLevel(3)" />
+				<label for="warning">警告</label>
+				<input type="checkbox" checked="checked" id="error" onchange="toggleOutputLevel(2)" />
+				<label for="error">错误</label>
+				<input type="checkbox" checked="checked" id="fatal" onchange="toggleOutputLevel(1)" />
+				<label for="fatal">致命错误</label>
+			</fieldset>
+			<button type="button" onclick="onClear()">清除</button>
+			<button type="button" id="btnCopy">复制</button>
+		</td><td valign="top">
+			<fieldset id="selectLoggerId" style="width:200px;">
+				<legend>日志来源</legend>
+			</fieldset>
+		</td><td valign="top" width="100%">
+			<fieldset id="selectSection">
+				<legend>输出模块</legend>
+			</fieldset>
+		</td></tr>
+		<tr><td width="100%" height="100%" colspan="3">
+			<div id="panel"></div>
+		</td></tr>
+		</table>
+	</body>
+</html>
